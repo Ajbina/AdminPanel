@@ -68,6 +68,8 @@ public class Edit_NoticeActivity extends AppCompatActivity {
                 getAllInputData();
                 createStudent();
                 createAccountAndSaveInfo();
+                date.setText("");
+                details.setText("");
             }
         });
     }

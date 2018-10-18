@@ -79,6 +79,9 @@ public class AddEventFragment extends Fragment {
                 getAllInputData();
                 createStudent();
                 createAccountAndSaveInfo();
+                date.setText("");
+                headline.setText("");
+                content.setText("");
             }
         });
 

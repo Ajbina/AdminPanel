@@ -79,6 +79,9 @@ public class AddNewsFragment extends Fragment {
                 getAllInputData();
                 createStudent();
                 createAccountAndSaveInfo();
+                date.setText("");
+                headline.setText("");
+                content.setText("");
             }
         });
 

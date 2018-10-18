@@ -73,6 +73,10 @@ public class Edit_NewsfeedActivity extends AppCompatActivity {
                 getAllInputData();
                 createStudent();
                 createAccountAndSaveInfo();
+                date.setText("");
+                author.setText("");
+                headline.setText("");
+                content.setText("");
             }
         });
     }
