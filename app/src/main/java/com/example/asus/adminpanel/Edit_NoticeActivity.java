@@ -17,11 +17,11 @@ import java.util.Locale;
 
 public class Edit_NoticeActivity extends AppCompatActivity {
 
-    EditText date,details;
+    EditText date,details,headline;
     Button save;
     private DatabaseReference refDatabase;
     private Notice_Element notice;
-    String sDate,sDetails;
+    String sDate,sDetails,sHeadline;
     Calendar myCalendar = Calendar.getInstance();
 
 
@@ -31,6 +31,7 @@ public class Edit_NoticeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_edit__notice);
 
         date=findViewById(R.id.date);
+        headline=findViewById(R.id.headline);
         details=findViewById(R.id.details);
         save=findViewById(R.id.save);
         // refDatabase=FirebaseDatabase.getInstance().getReference("Newsfeed");
@@ -69,16 +70,18 @@ public class Edit_NoticeActivity extends AppCompatActivity {
                 createStudent();
                 createAccountAndSaveInfo();
                 date.setText("");
+                headline.setText("");
                 details.setText("");
             }
         });
     }
     void getAllInputData(){
         sDate=date.getText().toString();
+        sHeadline=headline.getText().toString();
         sDetails=details.getText().toString();
     }
     void  createStudent(){
-        notice=new Notice_Element(sDate,sDetails);
+        notice=new Notice_Element(sDate,sDetails,sHeadline);
     }
     void createAccountAndSaveInfo(){
         refDatabase= FirebaseDatabase.getInstance().getReference("Notice");

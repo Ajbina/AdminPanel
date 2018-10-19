@@ -1,14 +1,15 @@
 package com.example.asus.adminpanel;
 
 public class Notice_Element {
-    String date,details;
+    String date,details,headline;
 
     public Notice_Element() {
     }
 
-    public Notice_Element(String date, String details) {
+    public Notice_Element(String date, String details,String headline) {
         this.date = date;
         this.details = details;
+        this.headline=headline;
     }
 
     public String getDate() {
@@ -17,6 +18,14 @@ public class Notice_Element {
 
     public void setDate(String date) {
         this.date = date;
+    }
+
+    public String getHeadline() {
+        return headline;
+    }
+
+    public void setHeadline(String headline) {
+        this.headline = headline;
     }
 
     public String getDetails() {
